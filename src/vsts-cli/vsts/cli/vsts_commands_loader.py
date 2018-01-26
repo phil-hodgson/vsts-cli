@@ -8,6 +8,8 @@ from vsts.cli.build.commands import load_build_commands
 from vsts.cli.build.arguments import load_build_arguments
 from vsts.cli.code.commands import load_code_commands
 from vsts.cli.code.arguments import load_code_arguments
+from vsts.cli.packaging.commands import load_packaging_commands
+from vsts.cli.packaging.arguments import load_packaging_arguments
 from vsts.cli.team.commands import load_team_commands
 from vsts.cli.team.arguments import load_team_arguments
 from vsts.cli.work.commands import load_work_commands
@@ -18,6 +20,7 @@ class VstsCommandsLoader(CLICommandsLoader):
     def load_command_table(self, args):
         load_build_commands(self)
         load_code_commands(self)
+        load_packaging_commands(self)
         load_team_commands(self)
         load_work_commands(self)
         return super(VstsCommandsLoader, self).load_command_table(args)
@@ -25,6 +28,7 @@ class VstsCommandsLoader(CLICommandsLoader):
     def load_arguments(self, command):
         load_build_arguments(self)
         load_code_arguments(self)
+        load_packaging_arguments(self)
         load_team_arguments(self)
         load_work_arguments(self)
         super(VstsCommandsLoader, self).load_arguments(command)
