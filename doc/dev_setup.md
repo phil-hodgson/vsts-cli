@@ -37,6 +37,10 @@
    ```bash
    env\Scripts\activate.bat
    ```
+   On Windows PowerShell:
+   ```bash
+   env\Scripts\activate.ps1
+   ```
 
 3. Run the `dev_setup.py` script to install the VSTS CLI packages, VSTS Python SDK package, and other dependencies into your virtual environment:
    ```
