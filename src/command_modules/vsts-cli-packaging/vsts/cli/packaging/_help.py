@@ -12,3 +12,9 @@ helps['packaging'] = """
     short-summary: Commands to work with feeds and packages.
     long-summary:
 """
+
+helps['packaging feed'] = """
+    type: group
+    short-summary: Manage feeds.
+    long-summary:
+"""
