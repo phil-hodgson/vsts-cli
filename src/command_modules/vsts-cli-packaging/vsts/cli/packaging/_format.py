@@ -20,5 +20,11 @@ def transform_feed_table_output(result):
 def _transform_feed_row(row):
     table_row = OrderedDict()
     table_row['Name'] = row['name']
+    table_row['Description'] = row['description']
+
+    if row['hideDeletedPackageVersions']:
+        table_row['Hide Deleted Package Versions'] = 'True'
+    else:
+        table_row['Hide Deleted Package Versions'] = 'False'
 
     return table_row

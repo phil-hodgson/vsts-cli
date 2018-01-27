@@ -12,3 +12,4 @@ def load_packaging_commands(cli_command_loader):
         g.command('feed show', 'feed#show_feed', table_transformer=transform_feed_table_output)
         g.command('feed list', 'feed#get_feeds', table_transformer=transform_feeds_table_output)
         g.command('feed delete', 'feed#delete_feed')
+        g.command('feed update', 'feed#update_feed', table_transformer=transform_feed_table_output)
