@@ -79,6 +79,11 @@ def get_core_client(team_instance=None):
     return connection.get_client('vsts.core.v4_0.core_client.CoreClient')
 
 
+def get_feed_client(team_instance=None):
+    connection = get_vss_connection(team_instance)
+    return connection.get_client('vsts.feed.v4_1.feed_client.FeedClient')
+
+
 def get_git_client(team_instance=None):
     connection = get_vss_connection(team_instance)
     return connection.get_client('vsts.git.v4_0.git_client.GitClient')
