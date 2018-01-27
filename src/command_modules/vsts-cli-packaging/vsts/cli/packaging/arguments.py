@@ -12,4 +12,3 @@ def load_packaging_arguments(cli_command_loader):
     with ArgumentsContext(cli_command_loader, 'list') as ac:
         ac.argument('team_instance', options_list=('--instance', '-i'))
         ac.argument('detect', **enum_choice_list(_ON_OFF_SWITCH_VALUES))
-from knack.arguments import enum_choice_list, ArgumentsContext
