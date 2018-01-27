@@ -12,6 +12,7 @@ class VstsCLIHelp(CLIHelp):
         # import command group help
         import vsts.cli.build._help
         import vsts.cli.code._help
+        import vsts.cli.packaging._help
         import vsts.cli.team._help
         import vsts.cli.work._help
         super(VstsCLIHelp, self).__init__(cli_ctx=cli_ctx,

@@ -35,3 +35,26 @@ def get_feeds(team_instance=None, detect=None):
         return feed_list
     except Exception as ex:
         handle_command_exception(ex)
+
+
+def show_feed(name,team_instance=None, detect=None):
+    """Show a feed.
+    :param name: The name of the feed.
+    :type name: str
+    :param team_instance: The URI for the VSTS account (https://<account>.visualstudio.com) or your TFS project
+                          collection.
+    :type team_instance: str
+    :param detect: When 'On' unsupplied arg values will be detected from the current working
+                   directory's repo.
+    :type detect: str
+    :rtype: list of :class:`<Feed> <feed.v4_1.models.Feed>`
+    """
+    try:
+        team_instance = resolve_instance(detect=detect, team_instance=team_instance)
+        feed_client = get_feed_client(team_instance)
+
+        feed_list = feed_client.get_feed(name)
+
+        return feed_list
+    except Exception as ex:
+        handle_command_exception(ex)
